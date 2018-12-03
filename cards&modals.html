@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sticky Menu</title>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- menu -->
+  <div class="ui inverted vertical masthead center aligned segment" style="background-color: #009999;">
+        <div class="ui center aligned container">
+            <div class="ui" style="background-color: #009999;">
+              <!-- <a href="https://semantic-ui.com/examples/fixed.html#" class="header item"> -->
+            <div class="ui centered small image" >
+              <a href="#">
+              <img class="logo" src="./logo_white.png">
+              </a>
+          </div>
+          <!-- </a> -->
+            </div>
+        </div>
+    </div>
+  <!-- cards -->
+  
+    <!-- HEADER -->
+    <!-- <h1 class="ui header" style="padding-top: 1%; text-align: center;"></h1> -->
+    
+    
+      
+
+
+
+      <h3 class="ui center aligned header">Glass Bottle Production Band Operation Panel</h3>
+      <!-- CARDS -->
+      <div class="ui stackable four cards divided grid container"  id="center">
+
+        <div class="card">
+          <a class="centered medium image" href="#">
+            <img src="https://www.mindmeister.com/images/download/24205624">
+          </a>
+          <div class="content">
+            <div class="header">HEADER</div> 
+            <div class="description">
+              DESCRIPTION
+            </div>
+          </div>      
+          <button data-modal="modal1" class="ui compact attached icon large red button" id="call-modals" onclick="showModal(this)">
+            <i class="right chevron icon" style="margin-right: 30%;"></i> 
+            Operation Started
+          </button>      
+        </div>
+
+        <div class="card">
+          <a class="image" href="#">
+            <img src="https://www.mindmeister.com/images/download/24205624">
+          </a>
+          <div class="content">
+            <div class="header">HEADER</div>
+            <div class="description">
+              DESCRIPTION
+            </div>
+          </div>      
+           <button data-modal="modal1" class="ui compact attached icon large red button" id="call-modals" onclick="showModal(this)">
+            <i class="right chevron icon" style="margin-right: 30%;"></i> 
+            Operation Started
+          </button>      
+        </div>
+
+        <div class="card">
+          <a class="image" href="#">
+            <img src="https://www.mindmeister.com/images/download/24205624">
+          </a>
+          <div class="content">
+            <div class="header">HEADER</div>
+            <div class="description">
+              DESCRIPTION
+            </div>
+          </div>      
+           <button data-modal="modal1" class="ui compact attached icon large red button" id="call-modals" onclick="showModal(this)">
+            <i class="right chevron icon" style="margin-right: 30%;"></i> 
+            Operation Started
+          </button>   
+        </div>
+
+        <div class="card">
+          <a class="image" href="#">
+            <img src="https://www.mindmeister.com/images/download/24205624">
+          </a>
+          <div class="content">
+            <div class="header">HEADER</div>
+            <div class="description">
+              DESCRIPTION
+            </div>
+          </div>      
+           <button data-modal="modal1" class="ui compact attached icon large red button" id="call-modals" onclick="showModal(this)">
+            <i class="right chevron icon" style="margin-right: 30%;"></i> 
+            Operation Started
+          </button>      
+        </div>
+
+        </div>
+      </div>
+
+
+
+      
+  <!-- modals -->
+  <div class="ui united modal" id="modal1">
+    <div class="header">Modal 1</div>
+    <div class="content">Some info will go here...</div>
+    <div class="actions">
+      <div class="ui blue labeled icon button" id="btn-modal-1"><i class="arrow sign left icon"></i>Close me and Call modal 2</div>
+    </div>
+  </div>
+
+  <div class="ui united fullscreen modal" id="modal2">
+    <div class="header"> Modal 2 </div>
+    <div class="content">If you want to close previous modals before show the next modal, you should disable the parameter <b>'allowMultiple'</b>.  </div>
+    <div class="actions">
+    <div class="ui red labeled icon button" id="btn-modal-2"><i class="arrow sign left icon"></i>Close me and Call modal 3</div>
+    </div>
+  </div>
+
+
+  <div class="ui united small modal" id="modal3">
+  <div class="header"> Modal 3 </div>
+  <div class="content"> Hello World </div>
+  <div class="actions">
+    <div class="ui cancel button" id="btn-modal-3"> <i class="checkmark icon"></i> Close All and Finish. </div> 
+  </div>
+  </div>
+
+<!-- Bored Modal -->
+  <div class="ui small modal" id="modal4">
+  <div class="header"> Don't talk with me! </div>
+  <div class="content"> :'( darkness my only old friend... <br> I don't have the class <b>.united</b></div>
+  <div class="actions">
+    <div class="ui secondary cancel button"> Close me! </div>
+  </div>
+  </div>
+
+
+
+<script>
+//Multiple Modals
+// all first 3 modals will be called and showed but 'BORED MODAL' won't. Only when you click on the last button
+// .united is a custom class and you can use anything.
+$('.united.modal').modal({
+  // this parameter will enable/disable the closing for the previous .united modals when the next will be opened :)
+  allowMultiple: false,
+});
+// attach events
+// haven't attached events over button of modal 3
+$('#modal1').modal('attach events', '#call-modals');
+$('#modal2').modal('attach events', '#btn-modal-1');
+$('#modal3').modal('attach events', '#btn-modal-2');
+$('#modal3').modal('hide');
+// disable the comment bellow to call the modal 4 after click on button into modal 3
+//$('#modal4').modal('attach events', '#btn-modal-3');
+// Individual events - unecessary but i does it.
+$('#center .button').on('click', function(){
+  // using the attribute data-modal to identify for what modal the button references
+  modal = $(this).attr('data-modal');
+  // creating the individual event attached to click over button
+  $('#'+modal+'.modal').modal(
+    'show'
+    );
+});
+</script>
+</body>
+</html>

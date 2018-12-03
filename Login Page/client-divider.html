@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sticky Menu</title>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+.segmentim {
+	padding-top: 100px; 
+}
+@media only screen and (max-width: 780px) {
+	#divider {
+		display: none;
+	}
+}
+@media only screen and (min-width: 780px) {
+	#yatayDivider {
+		display: none;
+	}
+}
+</style>
+<body>
+
+	<div class="ui inverted vertical masthead center aligned segment" style="background-color: #009999;">
+		<div class="ui center aligned container">
+
+
+			<div class="ui centered small image" >
+				<a href="#">
+					<img class="logo" src="./logo_white.png">
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+
+	<body>
+		<div class="ui middle aligned center aligned grid">
+			<div class="ten wide column">
+				<div class="ui placeholder segment" style=" margin-top: 10%;">
+					<div class="ui two column stackable grid container" >
+						<div class="column">
+							<!--  -->
+
+							<div class="ui icon header">
+								<i src="icons/manager.png"></i>
+								Find Country
+							</div>
+							<div class="field">
+								<div class="ui primary button">
+								Create
+							</div>
+							</div>
+						</div>
+
+						<!-- divider -->
+						<div class="ui horizontal divider" id="yatayDivider">
+							Or
+						</div>
+						<div class="ui vertical divider" id="divider">
+							Or
+						</div>
+						<!--  -->
+
+						<div class="column">
+							<div class="ui large icon header">
+								<i class="world icon"></i>
+								Add New Country
+							</div>
+							<div class="ui primary button">
+								Create
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</body>
+	</div>
+</div>
+</html>

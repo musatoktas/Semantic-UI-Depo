@@ -1,0 +1,57 @@
+<div class="card">
+	<a class="image" href="#">
+		<img src="#">
+	</a>
+	<div class="content">
+		<div class="header"><?php echo $txt?></div>
+		<div class="description">
+			sample description
+		</div>
+	</div>			
+	<div class="ui bottom attached button" id="" onclick="showModal(this)">
+		<i class="blind icon"></i>  <!-- Call back e gore icon-->
+	</div>			
+</div>
+
+<div class="ui united modal" id="">
+	<div class="header"></div>
+	<div class="ui segment">		
+		<img class="ui centered medium image" src="">
+	</div>
+	<div class="content"></div>
+	<div class="actions">
+		<div class="ui labeled canceled icon" onclick="modalButtonClick(this)"><i class="arrow sign right icon"></i>Done</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+
+				$('#modal1').modal('show');
+				$('#modal2').modal('attach events', '#mdl-btn-1');
+				$('#modal3').modal('attach events', '#mdl-btn-2');
+				$('#modal4').modal('attach events', '#mdl-btn-3');
+
+
+			case "2":
+				$('#modal5').modal('show');
+				$('#modal6').modal('attach events', '#mdl-btn-5');
+				$('#modal7').modal('attach events', '#mdl-btn-6');
+			break;
+
+			case "3":
+				$('#modal8').modal('show');
+				$('#modal9').modal('attach events', '#mdl-btn-8');
+				$('#modal10').modal('attach events', '#mdl-btn-9');
+			break;
+
+			case "4":
+				$('#modal11').modal('show');
+				$('#modal12').modal('attach events', '#mdl-btn-11');
+			break;
+
+		}
+
+		
+	}
+</script>
