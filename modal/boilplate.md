@@ -1,29 +1,23 @@
  ```
-<div class="ui modal">
+    <button class="ui compact labeled icon button" style="margin-bottom:20px;" id="modal-button">
+      <i class="plus icon"></i>
+            New Modal
+    </button>
+          
+          
+          
+      <div class="ui modal">
         <div class="scrolling content">
-         <?php include_once "yoursidebar.php" ?>
+         Success! You just create a modal
         </div>
     
     </div>	
-    $("#modalButton").click( function(){
-        $(".ui.customModal.modal").modal("show");
+
+<script>
+    $("#modal-button").click( function(){
+        $(".ui.modal").modal("show");
     });
 
-    <div class="ui modal">
-        <div class="scrolling content">
-         <?php include_once "yoursidebar.php" ?>
-        </div>
-    
-    </div>
-
-    $("#modalButton").click( function(){
-        
-        $(".ui.customModal.modal")
-            .modal({
-                width: 400,
-                height: 200
-                })
-            .modal("show");
-    });
+ </script>
     
 ```
